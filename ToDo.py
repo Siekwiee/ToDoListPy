@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import *
 
 canvas = tk.Tk()
 canvas.title("Todo List")
@@ -35,8 +36,12 @@ def update_listbox_size():
 
     tasks_listbox.config(width=tasks_listbox_width, height=tasks_listbox_height)
 
-label = tk.Label(canvas, text="Hello, Tkinter!")
-label.pack()
+
+Image_icon = PhotoImage(file='ToDoListPy/Assets/task.png')
+canvas.iconphoto(False, Image_icon)
+
+TopImage = PhotoImage(file="ToDoListPy/Assets/topbar.png")
+Label(canvas, image = TopImage).pack()
 
 entry = tk.Entry(canvas)
 entry.pack()
